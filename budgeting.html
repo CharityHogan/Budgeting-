@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgeting App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Budgeting App</h1>
+  </header>
+
+  <main>
+    <section id="add-expense">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input type="text" id="expense-name" placeholder="Expense Name" required>
+        <input type="number" id="expense-amount" placeholder="Amount" required>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section id="expense-list">
+      <h2>Expenses</h2>
+      <ul id="expenses"></ul>
+    </section>
+
+    <section id="budget-summary">
+      <h2>Summary</h2>
+      <p>Total Expenses: $<span id="total-expenses">0</span></p>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
