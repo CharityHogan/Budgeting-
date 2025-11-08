@@ -3,9 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Smart Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a href="budgeting.html">Budgeting</a>
+  <header>
+    <h1>Smart Budget Tracker</h1>
+  </header>
+
+  <main>
+    <section id="add-expense">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input type="text" id="expense-name" placeholder="Expense Name" required>
+        <input type="number" id="expense-amount" placeholder="Amount" required min="0">
+        <select id="expense-category" required>
+          <option value="">Select Category</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section id="expense-list">
+      <h2>Expenses</h2>
+      <ul id="expenses"></ul>
+    </section>
+
+    <section id="budget-summary">
+      <h2>Summary</h2>
+      <p>Total Expenses: $<span id="total-expenses">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smart Budget Tracker | Data stored locally in your browser</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

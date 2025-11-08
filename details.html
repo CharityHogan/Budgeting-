@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Details - Smart Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Smart Budget Tracker</h1>
+      <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="details.html" class="active">Expense Details</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="expense-detail card">
+      <a href="index.html" class="back-link">← Back to Dashboard</a>
+      <div id="detail-content">
+        <p class="loading">Loading expense details...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smart Budget Tracker | Data stored locally in your browser</p>
+  </footer>
+
+  <script type="module" src="js/details.js"></script>
+</body>
+</html>
