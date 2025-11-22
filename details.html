@@ -5,31 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Details - Smart Budget Tracker</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .back-link {
+      display: inline-block;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      transform: translateX(-5px);
+    }
+
+    .detail-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .detail-header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-header h2 {
+      color: #2d3748;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-amount {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #667eea;
+      margin: 1rem 0;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .detail-item {
+      background: #f7fafc;
+      padding: 1.25rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid #667eea;
+    }
+
+    .detail-label {
+      font-size: 0.875rem;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .loading {
+      text-align: center;
+      color: #718096;
+      padding: 2rem;
+    }
+
+    .error {
+      background: #fed7d7;
+      color: #c53030;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid #c53030;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Smart Budget Tracker</h1>
-      <div class="nav-links">
-        <a href="index.html">Dashboard</a>
-        <a href="details.html" class="active">Expense Details</a>
-      </div>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <h1>💰 Smart Budget Tracker</h1>
+      <p>Expense Details</p>
+    </header>
 
-  <main>
-    <section class="expense-detail card">
+    <div class="card">
       <a href="index.html" class="back-link">← Back to Dashboard</a>
       <div id="detail-content">
         <p class="loading">Loading expense details...</p>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Smart Budget Tracker | Data stored locally in your browser</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Smart Budget Tracker | Data stored locally in your browser</p>
+    </footer>
+  </div>
 
-  <script type="module" src="js/details.js"></script>
+  <script type="module" src="details.js"></script>
 </body>
 </html>

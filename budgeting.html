@@ -3,37 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budgeting App</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Smart Budget Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Budgeting App</h1>
-  </header>
+  <div class="container">
+    <header>
+      <h1>💰 Smart Budget Tracker</h1>
+      <p>Track your expenses and stay on budget</p>
+    </header>
 
-  <main>
-    <section id="add-expense">
-      <h2>Add Expense</h2>
+    <div class="card">
+      <h2>Add New Expense</h2>
       <form id="expense-form">
-        <input type="text" id="expense-name" placeholder="Expense Name" required>
-        <input type="number" id="expense-amount" placeholder="Amount" required>
-        <button type="submit">Add</button>
+        <div class="form-grid">
+          <input type="text" id="expense-name" placeholder="Expense Name" required>
+          <input type="number" id="expense-amount" placeholder="Amount" step="0.01" min="0" required>
+          <select id="expense-category" required>
+            <option value="">Select Category</option>
+          </select>
+          <button type="submit">Add Expense</button>
+        </div>
       </form>
-    </section>
+    </div>
 
-    <section id="expense-list">
-      <h2>Expenses</h2>
-      <ul id="expenses"></ul>
-    </section>
-
-    <section id="budget-summary">
+    <div class="card">
       <h2>Summary</h2>
-      <p>Total Expenses: $<span id="total-expenses">0</span></p>
-    </section>
-  </main>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h3>Total Expenses</h3>
+          <div class="amount">$<span id="total-expenses">0.00</span></div>
+        </div>
+        <div class="summary-card">
+          <h3>Total Items</h3>
+          <div class="amount"><span id="total-items">0</span></div>
+        </div>
+        <div class="summary-card">
+          <h3>Average Expense</h3>
+          <div class="amount">$<span id="avg-expense">0.00</span></div>
+        </div>
+      </div>
+    </div>
 
-  <script type="module" src="js/main.js"></script>
+    <div class="card">
+      <h2>Spending by Category</h2>
+      <div class="chart-container" id="category-chart"></div>
+    </div>
+
+    <div class="card">
+      <h2>Expense List</h2>
+      <div class="filter-section">
+        <select id="filter-category">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+      <ul class="expense-list" id="expenses"></ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Charity Hogan Smart Budget Tracker | Data stored locally in your browser</p>
+    </footer>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal" id="edit-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Expense</h2>
+        <div class="modal-close" id="modal-close-btn">✕</div>
+      </div>
+      <form id="edit-form">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <input type="text" id="edit-name" placeholder="Expense Name" required>
+          <input type="number" id="edit-amount" placeholder="Amount" step="0.01" min="0" required>
+          <select id="edit-category" required>
+            <option value="">Select Category</option>
+          </select>
+          <button type="submit">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script type="module" src="main.js"></script>
 </body>
 </html>
