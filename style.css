@@ -21,7 +21,10 @@ header {
   color: white;
   margin-bottom: 2rem;
 }
-
+h1 img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
